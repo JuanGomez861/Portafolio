@@ -3,18 +3,20 @@ import './header.css'
 export function Header() {
     const [menu,setMenu]=useState(false)
     const classNav=`nav_slide_top ${menu ? 'nav_slide_top--active':''}`
+    const classSocial=`social_nav ${menu ? 'social_nav--active' : ''}`
+    const classList=`nav_list ${menu ? 'nav_list--active':''}`
     return (
         <header className="header">
-            <nav className={classNav}>
-                <div className="container_nav">
+            <nav className={classNav}></nav>
+                <div className="container_nav main_position">
                     <img src="https://williamssam.netlify.app/assets/samuel.jpg" alt="" className="avatar" />
-                    <ul className="nav_list nav_list--visible">
+                    <ul className={classList}>
                         <li><a href="#about">About</a></li>
                         <li><a href="#about">Skills</a></li>
                         <li><a href="#about">Project</a></li>
                         <li><a href="#about">Contact</a></li>
                     </ul>
-                    <section className="social_nav social_nav--visible">
+                    <section className={classSocial}>
                         <a className="icon_container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="white"/></svg>
                         </a>
@@ -27,9 +29,8 @@ export function Header() {
                         </a>
                     </section>
                     {menu ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="30" height="30"  onClick={()=>{setMenu(!menu)}} className='hamburguer'><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" fill="white"/></svg>:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" className='hamburguer' onClick={()=>{setMenu(!menu)}}><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" fill="white"/></svg> }
-                    
                 </div>
-            </nav>
+          
 
         </header>
     )

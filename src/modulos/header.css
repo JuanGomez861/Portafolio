@@ -1,0 +1,144 @@
+.header{
+    width: 100%;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+.nav_slide_top{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    padding: 10px 22px;
+    position: relative;
+
+}
+.container_nav{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 8px 23px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-radius: 7px;
+    height: 57px;
+    transform: translateY(100px);
+    animation: moveH .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)  forwards;
+}
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav_list{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.nav_list li {
+    list-style: none;
+    overflow: hidden;
+}
+.nav_list a{
+    color: white;
+    text-decoration: none;
+    transition: color .6s ease;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-size: 1rem;
+    opacity: .9;
+
+}
+.icon_container{
+    border-radius: 50%;
+    transition: background-color .4s ease;
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+}
+.icon_container:hover{
+    background-color: #66ffcc;
+}
+.icon_container:hover svg path{
+    fill: #1c1c1c;
+}
+.nav_list a::after{
+    margin-top:5px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    transition: transform .6s ease;
+    transform: scale(0);
+
+}
+.nav_list li:hover a::after{
+    transform: scale(1);
+    background-color:#66ffcc;
+}
+
+.nav_list li:hover a{
+    color: #66ffcc;
+    
+}
+.hamburguer{
+    display: none;
+}
+
+@keyframes moveH {
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateY(100px);
+    }100%{
+        transform: translate(0);
+    }
+}
+
+.social_nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.icon_container{
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-items: center;
+
+}
+@media screen and (max-width:1200px){
+    .nav_slide_top{
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width:830px){
+    .social_nav{
+        position: absolute;
+        opacity: 0;
+    }
+    .nav_list{
+        position: absolute;
+        opacity: 0;
+    }
+    .hamburguer{
+        display: block;
+    }
+    .nav_slide_top--active{
+        background-color: #1c1c1c;
+        animation: menu .5s forwards;
+    }
+}
+
+@keyframes menu {
+    0%{
+        transform: translateY(-100%);
+    }100%{
+        transform: translateY(0);
+    }
+
+}

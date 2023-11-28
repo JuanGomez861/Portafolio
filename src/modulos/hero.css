@@ -1,0 +1,103 @@
+.hero{
+    width: 100%;
+    height: 85vh;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.hero_section{
+    max-width: 1200px;
+    margin: 10px auto 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 5rem;
+    color: white;
+    align-items: center;
+    }
+
+.hero_figure{
+    max-width: 360px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/assets/coding-ground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    animation: images .6s .9s ease forwards;
+    
+}
+.hero_text{
+    transform: translate(-100%);
+    padding: 0 0 0 10px;
+    animation: text .5s .5s ease forwards;
+}
+.hero_text p{
+    margin-bottom: 70px;
+    color: #f2f2f2;
+    opacity: .8;
+}
+.hero_section strong{
+    color: #66ffcc;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    padding: 3px 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.hero_section h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.hero_text a {
+    text-align: center;
+    max-width: 150px;
+    width: 100%;
+    height: 41px;
+    border: 1px solid #66ffcc;
+    padding: 10px 20px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #66ffcc;
+    border-radius: 5px;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+@keyframes text {
+    0%{
+        transform:translate(-100%);
+    }100%{
+        transform: translate(0);
+    }
+}
+@keyframes images {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .hero{
+        padding: 10px;
+    }
+}
+@media screen and (max-width:850px){
+    .hero_figure{
+        display: none;
+    }
+    .hero_text{
+        width: 100%;
+        text-align: center;
+    }
+    .hero_section{
+        height: 100%;
+    }
+}

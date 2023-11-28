@@ -13,6 +13,7 @@
     gap: 5rem;
     color: white;
     align-items: center;
+    overflow: hidden;
     }
 
 .hero_figure{
@@ -67,6 +68,24 @@
     position: relative;
     text-decoration: none;
     overflow: hidden;
+}
+.hero_text a::after{
+    content:"Contratame";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(0.4% at 0 100%);
+    background-color: #66ffcc;
+    transition: clip-path .3s ease,color .3s ease;
+}
+.hero_text a:hover::after{
+    color: #1c1c1c;
+    clip-path: circle(141.7% at 0 100%);
 }
 
 @keyframes text {

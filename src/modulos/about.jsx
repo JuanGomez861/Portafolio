@@ -2,13 +2,13 @@ import './about.css'
 export function About() {
 
     return (
-        <section className="about_section">
+        <section className="about_section" id="aboutA">
             <section className='about'>
                 <figure className="figure_about">
                     <img src="../../public/assets/williams.jpg" alt="" />
                 </figure>
                 <section className="about_text">
-                    <span>Quien es Juan Esteban</span>
+                    <span className='subtitle'>Quien es Juan Esteban</span>
                     <h1 className="about_title">A Bit about me</h1>
                     <p>I m passionate about deciphering challenging problems and creating exceptional digital experience.</p>
                     <p>As I ve grown as a developer, I ve contributed to projects and worked with other developers to create working applications and have written code that are maintainable and easy to understand</p>

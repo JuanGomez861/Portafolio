@@ -1,6 +1,8 @@
 import { Header } from "./header"
 import { Text } from "./hero"
 import { About } from "./about"
+import { Skills } from "./Skills"
+import './landing.css'
 export function Hero() {
 
     return (
@@ -10,6 +12,7 @@ export function Hero() {
             <Text/>
         </section>
             <About/>
+            <Skills/>
         </>
     )
 }

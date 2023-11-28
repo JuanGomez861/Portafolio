@@ -39,12 +39,12 @@
     color: #f2f2f2;
     opacity: .8;
 }
-.hero_section strong{
+.subtitle{
     color: #66ffcc;
     font-weight: 500;
     letter-spacing: 1.4px;
     padding: 3px 0;
-    font-size: 1rem;
+    font-size: .9rem;
     text-transform: uppercase;
     margin-bottom: 15px;
 }

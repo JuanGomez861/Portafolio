@@ -1,5 +1,4 @@
 .about_section{
-    margin-top: 5px;
     background-color: #1c1c1c;
     height: 100vh;
     width: 100%;
@@ -64,7 +63,10 @@
 @media screen and (max-width:1200px){
     .about{
         padding: 20px 10px;
+        justify-content: space-around
+        
     }
+
 }
 @media screen  and (max-width:850px){
     .about_section{
@@ -76,16 +78,21 @@
         gap: 30px;
     }
     .figure_about{
-        max-width: 800px;
         width: 100%;
-        text-align: center;
+        align-self: center;
     }
-    .figure_about img{
-        width: 425px;
-    }
+
     .about_text{
         width: 100%;
-        padding: 0 20px;
+        padding: 0 20px 0;
     }
     
+}
+@media screen and (max-width:500px){
+    .figure_about{
+        width: 100%;
+    }
+    .figure_about img{
+        width: 100%;
+    }
 }

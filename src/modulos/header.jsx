@@ -11,7 +11,7 @@ export function Header() {
             <div className="container_nav main_position">
                 <img src="../assets/apple-touch-icon.png" alt="" className="avatar" />
                 <ul className={classList}>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#aboutA">About</a></li>
                     <li><a href="#about">Skills</a></li>
                     <li><a href="#about">Project</a></li>
                     <li><a href="#about">Contact</a></li>
